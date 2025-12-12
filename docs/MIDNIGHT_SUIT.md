@@ -40,6 +40,11 @@ This document outlines a copyright-safe, black recolor armour concept inspired b
    - Replace model paths with your new meshes and BGSM materials.
    - Assign crafting recipe at the Chemistry Station under a new constructible object category "Guardian Gear".
 
+### Exporting your plugin (ESP/ESL)
+- In the Creation Kit, load your working file, then choose **File → Save** and enter a name such as `MidnightGuardian.esp`.
+- To keep load order light, open **File → Data**, highlight your plugin, and tick **ESL** if it meets the compact form ID requirements. This keeps it light like an ESL while staying in ESP format.
+- Reopen the plugin and confirm your ARMA/ARMO and COBJ entries still resolve correctly after ESL flagging.
+
 ## Chemistry Station crafting recipe
 Follow these Creation Kit steps so the player can build the suit at a Chemistry Workbench:
 
@@ -70,12 +75,35 @@ Follow these Creation Kit steps so the player can build the suit at a Chemistry 
    - Test with common animation packs to confirm no clipping during sprint, melee, and idle poses.
    - Adjust weight slider support and body morphs as needed.
 
+## Packing BA2 archives
+Use Archive2 (installed with the Creation Kit) to compress assets while keeping the plugin modular:
+
+1. Launch **Archive2** and choose **File → New**. Select `General` archive type for meshes/materials and `Textures` for texture ba2s.
+2. Drag your folders into the window using the in-game paths:
+   - `Meshes/MidnightGuardian/Armor/`
+   - `Materials/MidnightGuardian/Armor/`
+   - `Textures/MidnightGuardian/Armor/`
+3. Save each archive alongside your plugin as `MidnightGuardian - Main.ba2` (for meshes/materials) and `MidnightGuardian - Textures.ba2` (for textures).
+4. Open your plugin in the Creation Kit or FO4Edit and confirm the mesh/material paths point to the same folder names you packed so the BA2 files resolve correctly.
+
+## Manual install to the Steam Data folder
+If you want to deploy without a mod manager:
+
+1. Locate the game: typically `Steam/steamapps/common/Fallout 4/Data/`.
+2. Copy the following into `Data/`:
+   - `MidnightGuardian.esp` (or ESL-flagged plugin)
+   - `MidnightGuardian - Main.ba2`
+   - `MidnightGuardian - Textures.ba2`
+3. Launch Fallout 4 or your mod manager and make sure the plugin is enabled in the load order.
+4. Start the game, craft the suit at a Chemistry Workbench under **Guardian Gear**, and verify the meshes/materials load from the BA2 archives.
+
 ## Nexus Mod Manager packaging
 - Folder structure inside the archive:
   - `Data/Meshes/MidnightGuardian/Armor/` (NIF + TRIs)
   - `Data/Textures/MidnightGuardian/Armor/` (DDS)
   - `Data/Materials/MidnightGuardian/Armor/` (BGSM)
   - `Data/MidnightGuardian.esp` (or ESL-flagged plugin)
+  - Optional: `Data/MidnightGuardian - Main.ba2` and `Data/MidnightGuardian - Textures.ba2` if you are shipping archives instead of loose assets
 - Include a README with installation and uninstall steps.
 - Zip the `Data` folder; NMM users can install directly via "Add mod from file".
 

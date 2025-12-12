@@ -51,7 +51,9 @@ Follow these steps once your mod package (Data folder) is ready or downloaded:
    - Select your zipped archive. NMM will import it and list it under **Mods**.
    - Click **Activate**. Ensure the plugin (e.g., `MidnightGuardian.esp`) is enabled in the **Plugins** tab.
 3. **Manual install option**
-   - Extract the archive into your `Fallout 4/Data/` directory, preserving folders: `Meshes/`, `Textures/`, `Materials/`, and the plugin file.
+   - Extract the archive into your `Steam/steamapps/common/Fallout 4/Data/` directory.
+   - If you packed BA2 files, copy `MidnightGuardian - Main.ba2`, `MidnightGuardian - Textures.ba2`, and the plugin (`MidnightGuardian.esp` or ESL-flagged) into `Data/`.
+   - If shipping loose files, preserve the folder structure (`Meshes/`, `Textures/`, `Materials/`) when copying.
    - Enable the plugin in your mod manager or the game’s load order menu.
 4. **Uninstall**
    - In NMM, deactivate and remove the mod. For manual installs, delete the added `MidnightGuardian` folders and the plugin file from `Data/`.

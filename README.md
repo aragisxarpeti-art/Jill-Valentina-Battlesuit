@@ -16,7 +16,7 @@ Fallout 4 armour concept inspired by modern tactical outfits. This repository do
 2. Paint black/cobalt textures; export DDS (BC7 for color, BC5 for normals) and author BGSM materials.
 3. Skin and weight the mesh in Outfit Studio to the female body reference.
 4. Duplicate a vanilla combat armor record in the Creation Kit, point to your meshes/materials, and add a Chemistry Station recipe under "Guardian Gear" with ingredients (e.g., adhesive + ballistic fiber + leather).
-5. Package the Data folder (Meshes, Textures, Materials, ESP/ESL) into a zip for NMM installation.
+5. Save your plugin as an ESP (or ESL-flagged ESP), pack textures/meshes/materials into BA2 archives, and zip the Data folder for NMM installation.
 
 ## Detailed workflow
 See [`docs/MIDNIGHT_SUIT.md`](docs/MIDNIGHT_SUIT.md) for step-by-step notes on visuals, materials, skinning, plugin setup, and packaging.
