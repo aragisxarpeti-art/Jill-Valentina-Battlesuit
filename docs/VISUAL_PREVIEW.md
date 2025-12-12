@@ -58,6 +58,7 @@ Follow these steps once your mod package (Data folder) is ready or downloaded:
 
 ## Where to find it in-game
 - Chemistry Station → **Guardian Gear** category (as described in the plugin setup) to craft the armour.
+- Suggested recipe: 4x Adhesive, 6x Ballistic Fiber, 6x Leather, 2x Aluminum (tune to your balancing needs) with optional Armorer rank 2 requirement.
 
 ## Screenshots (optional)
 - Replace this schematic with your own in-game screenshots once you have the meshes and textures exported. Capture front, back, and side views in neutral lighting for best clarity.

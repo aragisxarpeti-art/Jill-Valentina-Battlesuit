@@ -40,6 +40,31 @@ This document outlines a copyright-safe, black recolor armour concept inspired b
    - Replace model paths with your new meshes and BGSM materials.
    - Assign crafting recipe at the Chemistry Station under a new constructible object category "Guardian Gear".
 
+## Chemistry Station crafting recipe
+Follow these Creation Kit steps so the player can build the suit at a Chemistry Workbench:
+
+1. **Create a category keyword**
+   - Make a new `KYWD` (e.g., `ap_GuardianGear`) with `WorkbenchChemistry` as the parent if you want a dedicated submenu.
+   - Add this keyword to the suit's `COBJ` record so the recipe appears under **Guardian Gear** at the Chemistry Station.
+
+2. **Build the constructible object (COBJ)**
+   - Duplicate an existing combat armor recipe (e.g., `co_Armor_Combat_Torso_Mk1`).
+   - Set **Created Object** to your ARMO record and **Created Object Count** to `1`.
+   - Add a **Workbench Keyword** of `WorkbenchChemistry`.
+   - Include a **BNAM** category keyword: your new `ap_GuardianGear` (or reuse a generic armor keyword if you prefer).
+
+3. **Define ingredients and conditions**
+   - Suggested components for a balanced cost:
+     - 4x Adhesive
+     - 6x Ballistic Fiber
+     - 6x Leather
+     - 2x Aluminum
+   - Add a condition requiring `HasPerk Armorer` rank 2 (optional) to keep it mid-game gated.
+
+4. **Save and test**
+   - Load the plugin, visit a Chemistry Workbench, open **Guardian Gear**, and craft the suit.
+   - Verify the item appears in inventory and equips with the correct models and materials.
+
 7. **In-game testing**
    - Verify first-person meshes render correctly.
    - Test with common animation packs to confirm no clipping during sprint, melee, and idle poses.
