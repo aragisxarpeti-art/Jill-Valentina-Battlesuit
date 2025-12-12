@@ -24,5 +24,10 @@ See [`docs/MIDNIGHT_SUIT.md`](docs/MIDNIGHT_SUIT.md) for step-by-step notes on v
 ## Visual preview and install guide
 See [`docs/VISUAL_PREVIEW.md`](docs/VISUAL_PREVIEW.md) for an ASCII silhouette, color legend, and Nexus Mod Manager download/installation steps.
 
+## Download and where to find the files
+- Click **Code → Download ZIP** (or clone the repo) to grab everything.
+- After extracting, open the `docs/` folder—use `docs/MIDNIGHT_SUIT.md` for the build steps and `docs/VISUAL_PREVIEW.md` for the preview + install guide.
+- If you do not see the `docs/` folder after download, re-extract or re-download to ensure all documentation files are included.
+
 ## Licensing
 This repository contains documentation only. Ensure any assets you create respect the licenses of the tools and base bodies you use.
